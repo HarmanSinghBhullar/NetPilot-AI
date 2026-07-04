@@ -12,3 +12,9 @@ class DeviceResponse(DeviceCreate):
 
     class Config:
         from_attributes = True
+
+class DeviceUpdate(BaseModel):
+    hostname: str
+    ip_address: str
+    device_type: str
+    location: str | None = None
